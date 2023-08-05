@@ -22,7 +22,22 @@ namespace UserRegistration
             else
             {
                 Console.WriteLine("First Name is not Valid");
-                ValidFirstName();
+            }
+        }
+        public static void ValidLastName()
+        {
+            Console.WriteLine("\nPlease Enter your Last Name:");
+            string lastName = Console.ReadLine();
+            string pattern = "^[A-Z][a-zA-Z]{2,}$";
+
+            if (Regex.IsMatch(lastName, pattern))
+            {
+                Console.WriteLine("Last Name is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Last Name is not Valid");
+                ValidLastName();
             }
         }
     }
