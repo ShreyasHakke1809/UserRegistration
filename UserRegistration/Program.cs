@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to User Registrtion program");
             Console.WriteLine("Please choose an option");
-            Console.WriteLine("\n1. First Name \n2. Last Name");
+            Console.WriteLine("\n1. First Name \n2. Last Name\n3.Valid Email");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -15,6 +15,9 @@
                     break;
                 case 2:
                     UserReg.ValidLastName();
+                    break;
+                case 3:
+                    UserReg.ValidEmail();
                     break;
                 default:
                     Console.WriteLine("Please choose a valid option");

@@ -40,5 +40,21 @@ namespace UserRegistration
                 ValidLastName();
             }
         }
+        public static void ValidEmail()
+        {
+            Console.WriteLine("\nPlease Enter your Email-ID:");
+            string email = Console.ReadLine();
+            string email_pattern = @"^[a-zA-Z0-9]{3,10}([._+-][a-zA-Z0-9]{1,10})?@[a-zA-Z0-9]{1,10}[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3})?$";
+
+            if (Regex.IsMatch(email, email_pattern))
+            {
+                Console.WriteLine("Email is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Email is not Valid");
+                ValidEmail();
+            }
+        }
     }
 }
