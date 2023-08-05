@@ -72,5 +72,22 @@ namespace UserRegistration
                 ValidMobileNumber();
             }
         }
+        public static void ValidPassword()
+        {
+            Console.WriteLine("\nPlease Enter your Password:");
+            Console.WriteLine("Password must contain min 8 characters");
+            string password = Console.ReadLine();
+            string password_pattern = "^[a-zA-Z]{8,}$";
+
+            if (Regex.IsMatch(password, password_pattern))
+            {
+                Console.WriteLine("Password is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Password is not Valid");
+                ValidPassword();
+            }
+        }
     }
 }

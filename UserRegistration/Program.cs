@@ -1,4 +1,6 @@
-﻿namespace UserRegistration
+﻿using System.Reflection.Metadata;
+
+namespace UserRegistration
 {
     internal class Program
     {
@@ -6,7 +8,7 @@
         {
             Console.WriteLine("Welcome to User Registrtion program");
             Console.WriteLine("Please choose an option");
-            Console.WriteLine("\n1.First Name\n2.Last Name\n3.Valid Email\n4.Valid MobileNumber");
+            Console.WriteLine("\n1.First Name\n2.Last Name\n3.Valid Email\n4.Valid MobileNumber\n5.Password");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -21,6 +23,9 @@
                     break;
                 case 4:
                     UserReg.ValidMobileNumber();
+                    break;
+                case 5:
+                    UserReg.ValidPassword();
                     break;
                 default:
                     Console.WriteLine("Please choose a valid option");
