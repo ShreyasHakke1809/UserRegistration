@@ -56,5 +56,21 @@ namespace UserRegistration
                 ValidEmail();
             }
         }
+        public static void ValidMobileNumber()
+        {
+            Console.WriteLine("\nPlease Enter your Mobie Number:");
+            string mobNum = Console.ReadLine();
+            string mobNum_pattern = "^[+]?91[ -][1-9][0-9]{9}$";
+
+            if (Regex.IsMatch(mobNum, mobNum_pattern))
+            {
+                Console.WriteLine("Mobie Number is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Mobie Number is not Valid");
+                ValidMobileNumber();
+            }
+        }
     }
 }
