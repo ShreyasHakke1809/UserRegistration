@@ -4,7 +4,7 @@ namespace UserRegistration
 {
     public class UserReg
     {
-        public static string ValidFirstName(string firstName)
+        public static Func<string, string> ValidFirstName = firstName =>
         {
             try
             {
@@ -30,8 +30,8 @@ namespace UserRegistration
                 return ex.Message;
             }
 
-        }
-        public static string ValidLastName(string lastName)
+        };
+        public static Func<string, string> ValidLastName = lastName =>
         {
             try
             {
@@ -56,8 +56,8 @@ namespace UserRegistration
             {
                 return ex.Message;
             }
-        }
-        public static string ValidEmail(string email)
+        };
+        public static Func<string, string> ValidEmail = email =>
         {
             try
             {
@@ -83,8 +83,8 @@ namespace UserRegistration
                 return ex.Message;
             }
 
-        }
-        public static string ValidMobileNumber(string mobNum)
+        };
+        public static Func<string, string> ValidMobileNumber = mobNum =>
         {
             try
             {
@@ -110,8 +110,8 @@ namespace UserRegistration
                 return ex.Message;
             }
 
-        }
-        public static string ValidPassword(string password)
+        };
+        public static Func<string, string> ValidPassword = password =>
         {
             try
             {
@@ -137,6 +137,6 @@ namespace UserRegistration
             {
                 return ex.Message;
             }
-        }
+        };
     }
 }
