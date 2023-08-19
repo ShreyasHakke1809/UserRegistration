@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata;
-
-namespace UserRegistration
+﻿namespace UserRegistration
 {
     internal class Program
     {
@@ -9,7 +7,7 @@ namespace UserRegistration
             Console.WriteLine("Welcome to User Registrtion program");
             Console.WriteLine("Please choose an option");
             Console.WriteLine("\n1.First Name\n2.Last Name\n3.Valid Email\n4.Valid MobileNumber\n5.Password");
-            int option = Convert.ToInt32(Console.ReadLine());
+            /*int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
                 case 1:
@@ -30,7 +28,15 @@ namespace UserRegistration
                 default:
                     Console.WriteLine("Please choose a valid option");
                     break;
-            }
+            }*/
+            UserReg.ValidMobileNumber("919673215173");
+            // Console.WriteLine("HaPPY");
+            // string us = UserReg.ValidMobileNumber("+91-9673215173");
+            //  string u = UserReg.ValidMobileNumber("+919673215173");
+
+            // Console.WriteLine("First" + use);
+            // Console.WriteLine(us);
+            // Console.WriteLine("Third" + u);
         }
     }
 }
